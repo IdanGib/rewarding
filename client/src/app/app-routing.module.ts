@@ -7,7 +7,7 @@ import { SummaryComponent } from './screens/summary/summary.component';
 const routes: Routes = [
   { path: '', component: SummaryComponent },
   { path: 'settings', component: SettingsComponent },
-  { path: 'kid:/id', component: KidComponent },
+  { path: 'kid/:id', component: KidComponent },
   { path: '**', component: SummaryComponent }
 ];
 

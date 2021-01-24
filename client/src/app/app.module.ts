@@ -9,6 +9,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import { SettingsComponent } from './screens/settings/settings.component';
 import { KidComponent } from './screens/kid/kid.component';
@@ -19,6 +20,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { EditGiftsComponent } from './edit-dialog/edit-gifts/edit-gifts.component';
 import { EditKidsComponent } from './edit-dialog/edit-kids/edit-kids.component';
 import { EditProfileComponent } from './edit-dialog/edit-profile/edit-profile.component';
+import { FormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -35,12 +38,15 @@ import { EditProfileComponent } from './edit-dialog/edit-profile/edit-profile.co
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
     MatBottomSheetModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

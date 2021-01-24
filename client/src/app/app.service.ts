@@ -11,6 +11,11 @@ export class AppService {
     init() {
         AppState.load();
     }
+
+    saveState() {
+        AppState.save();
+    }
+
     get state(): State {
         return { gifts: AppState.gifts, profile: AppState.profile, kids: AppState.kids };
     }

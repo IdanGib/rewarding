@@ -36,6 +36,7 @@ export class SettingsComponent implements OnInit {
 
     const s = dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed', result);
+      this.app.saveState();
       s?.unsubscribe();
     });
   }

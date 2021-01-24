@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Profile } from 'src/app/logic/interfaces';
 
 @Component({
   selector: 'app-edit-profile',
@@ -6,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./edit-profile.component.scss']
 })
 export class EditProfileComponent implements OnInit {
-  @Input() data: any;
+  @Input() data: Profile;
   constructor() { }
 
   ngOnInit(): void {

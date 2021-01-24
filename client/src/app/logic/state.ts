@@ -27,7 +27,7 @@ export class AppState implements State {
         }
         
     }
-    public save() {
+    public static save() {
         try {
             const { gifts, kids, profile } = this;
             const json = JSON.stringify({ gifts, kids, profile });

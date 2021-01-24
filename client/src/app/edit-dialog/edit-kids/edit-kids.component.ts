@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { KidProfile } from 'src/app/logic/interfaces';
 
 @Component({
   selector: 'app-edit-kids',
@@ -6,10 +7,28 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./edit-kids.component.scss']
 })
 export class EditKidsComponent implements OnInit {
-  @Input() data: any;
+  @Input() data: KidProfile[];
+  newKid: KidProfile;
   constructor() { }
+  add(newKid: KidProfile) {
+    this.data.push(newKid);
+    this.reset();
+  }
 
   ngOnInit(): void {
+    this.reset();
+  }
+  reset( ){
+    this.newKid = {
+        bag: [],
+        display: '',
+        stars: 0,
+        image: 'https://picsum.photos/200?random=' + Math.floor(Math.random() * 100)
+    };
+  }
+
+  delete(index: number) {
+    this.data.splice(index, 1);
   }
 
 }
