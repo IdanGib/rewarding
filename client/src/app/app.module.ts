@@ -14,13 +14,16 @@ import { SettingsComponent } from './screens/settings/settings.component';
 import { KidComponent } from './screens/kid/kid.component';
 import { SummaryComponent } from './screens/summary/summary.component';
 import {AppService } from 'src/app/app.service';
- 
+import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
+
 @NgModule({
   declarations: [
     AppComponent,
     SettingsComponent,
     KidComponent,
-    SummaryComponent
+    SummaryComponent,
+    EditDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ import {AppService } from 'src/app/app.service';
     MatIconModule,
     MatCardModule,
     MatBottomSheetModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
