@@ -7,6 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
+    "clear-deploy": "rm -rf site",
+    "copy-build" : "mkdir site && cp -r dist/client/** site",
+    "deploy": "npm run clear-deploy && ng build --prod && npm run copy-build",
     "e2e": "ng e2e"
   },
   "private": true,
