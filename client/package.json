@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "clear-deploy": "rm -rf ../deploy",
-    "copy-build" : "mkdir ../deploy && cp -r dist/client/** ../deploy",
+    "git-deploy": "git checkout deploy -- deploy",
+    "copy-build": "mkdir ../deploy && cp -r dist/client/** ../deploy",
     "deploy": "npm run clear-deploy && ng build --prod && npm run copy-build",
     "e2e": "ng e2e"
   },
