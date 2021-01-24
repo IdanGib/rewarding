@@ -18,6 +18,12 @@ export class EditKidsComponent implements OnInit {
   ngOnInit(): void {
     this.reset();
   }
+
+  get invalidName(): boolean {
+    const display = this.newKid.display;
+    return (!display) || this.data.some(d => d.display === display);
+  }
+
   reset( ){
     this.newKid = {
         bag: [],

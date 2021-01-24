@@ -1,15 +1,18 @@
 <div>
     <div class="new-kid">
-        <img
-        class="new-kid-avatar"
-        [src]="newKid.image">
+        <div>
+            <img
+            class="new-kid-avatar"
+            [src]="newKid.image">
+        </div>
+
         <mat-form-field appearance="fill" color="accent">
             <mat-label>Name</mat-label>
             <input matInput [(ngModel)]="newKid.display">
         </mat-form-field>
         <div>
             <button mat-fab 
-                [disabled]="!newKid.display"
+                [disabled]="invalidName"
                 color="accent"
                 (click)="add(newKid)">
                 <mat-icon>add</mat-icon>

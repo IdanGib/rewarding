@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from 'src/app/app.service';
+import { State } from 'src/app/logic/interfaces';
 
 @Component({
   selector: 'app-summary',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SummaryComponent implements OnInit {
   title = 'Summary';
-  constructor() { }
+  state: State;
+  constructor(public app: AppService) { }
 
   ngOnInit(): void {
+    this.state = this.app.state;
   }
 
 }

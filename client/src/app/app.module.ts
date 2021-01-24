@@ -22,6 +22,7 @@ import { EditKidsComponent } from './edit-dialog/edit-kids/edit-kids.component';
 import { EditProfileComponent } from './edit-dialog/edit-profile/edit-profile.component';
 import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import {MatInputModule} from '@angular/material/input';
     MatButtonModule,
     MatDialogModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatListModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
