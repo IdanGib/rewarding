@@ -5,7 +5,7 @@ export class AppState implements State {
     gifts: Gift[];
     static profile: Profile = {
         display: '',
-        image: ''
+        image: 'https://material.angular.io/assets/img/examples/shiba1.jpg'
     };
     static kids: KidProfile[] = [];
     static gifts: Gift[] = [];
@@ -21,7 +21,6 @@ export class AppState implements State {
                 AppState.kids = obj.kids;
                 AppState.profile = obj.profile;
             }
-            console.log('load success:', this);
         } catch(e) {
             console.error('load:', e);
             alert('fail to load state');

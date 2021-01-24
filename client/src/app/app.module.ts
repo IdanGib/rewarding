@@ -16,6 +16,9 @@ import { SummaryComponent } from './screens/summary/summary.component';
 import {AppService } from 'src/app/app.service';
 import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { EditGiftsComponent } from './edit-dialog/edit-gifts/edit-gifts.component';
+import { EditKidsComponent } from './edit-dialog/edit-kids/edit-kids.component';
+import { EditProfileComponent } from './edit-dialog/edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     SettingsComponent,
     KidComponent,
     SummaryComponent,
-    EditDialogComponent
+    EditDialogComponent,
+    EditGiftsComponent,
+    EditKidsComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,
