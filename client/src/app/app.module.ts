@@ -13,7 +13,8 @@ import {MatButtonModule} from '@angular/material/button';
 import { SettingsComponent } from './screens/settings/settings.component';
 import { KidComponent } from './screens/kid/kid.component';
 import { SummaryComponent } from './screens/summary/summary.component';
-
+import {AppService } from 'src/app/app.service';
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,11 @@ import { SummaryComponent } from './screens/summary/summary.component';
     MatBottomSheetModule,
     MatButtonModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(private app: AppService) {
+    this.app.init();
+  }
+}

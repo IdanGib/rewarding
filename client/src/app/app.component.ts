@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AppState } from 'src/app/logic/state';
+import { AppService } from './app.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,8 +7,7 @@ import { AppState } from 'src/app/logic/state';
 })
 export class AppComponent {
   title = 'Kids';
-  app: AppState;
   constructor() {
-    this.app = new AppState();
+    
   }
 }

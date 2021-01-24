@@ -1,28 +1,25 @@
-import { State } from "./interfaces";
-
+import { Gift, KidProfile, Profile, State } from "./interfaces";
 export class AppState implements State {
-    private readonly key = 'state';
-    kids: [];
-    profile: {
-        display: '';
+    profile: Profile;
+    kids: KidProfile[];
+    gifts: Gift[];
+    static profile: Profile = {
+        display: '',
         image: ''
     };
-    gifts: [];
-    
-    constructor() {
-        try {
-            this.load();
-        } catch(e) {}
-    }
-    
-    private load() {
+    static kids: KidProfile[] = [];
+    static gifts: Gift[] = [];
+
+    private static readonly key = 'state';
+
+    public static load() {
         try {
             const json = localStorage.getItem(this.key);
             if(json) {
                 const obj = JSON.parse(json);
-                this.gifts = obj.gifts;
-                this.kids = obj.kids;
-                this.profile = obj.profile;
+                AppState.gifts = obj.gifts;
+                AppState.kids = obj.kids;
+                AppState.profile = obj.profile;
             }
             console.log('load success:', this);
         } catch(e) {
@@ -35,7 +32,7 @@ export class AppState implements State {
         try {
             const { gifts, kids, profile } = this;
             const json = JSON.stringify({ gifts, kids, profile });
-            localStorage.setItem(this.key, json);
+            localStorage.setItem(AppState.key, json);
         } catch(e) {
             console.error('save:', e);
             alert('fail to save state');
